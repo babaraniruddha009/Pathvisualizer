@@ -1,0 +1,86 @@
+.cell {
+  display: inline-block;
+  height: 25px;
+  width: 25px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-color: var( --grid-border-color);
+  margin: 0;
+  cursor: pointer;
+}
+.row > .cell:last-child {
+  border-right: 1px solid var( --grid-border-color);
+}
+.selected {
+  background: #32363a !important;
+}
+
+.end {
+  background: rgb(214, 40, 40) !important;
+}
+
+.start {
+  background: #12990e !important;
+}
+
+
+.visited {
+  animation-name: visitedAnimation;
+  animation-duration: 1.5s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes visitedAnimation {
+  0% {
+    transform: scale(0.5);
+    background-color: rgba(0, 0, 66, 0.75);
+    border-radius: 100%;
+  }
+
+  50% {
+    background-color: rgba(17, 104, 217, 0.75);
+  }
+
+  
+
+  100% {
+    transform: scale(1);
+    background-color: rgba(0, 190, 218, 0.75);
+  }
+}
+
+
+
+
+.path {
+  animation-name: shortestPath;
+  animation-duration: 3s;
+  animation-timing-function: ease-out;
+  animation-delay: 0;
+  animation-direction: alternate;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+}
+
+@keyframes shortestPath {
+  0% {
+    transform: scale(0.6);
+    background-color: rgb(255, 254, 106);
+  }
+
+  50% {
+    transform: scale(1.2);
+    background-color: rgb(255, 254, 106);
+  }
+
+  100% {
+    transform: scale(1);
+    background-color: rgb(255, 254, 106);
+  }
+}

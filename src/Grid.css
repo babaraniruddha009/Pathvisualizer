@@ -1,0 +1,14 @@
+.row {
+  height: 25px;
+}
+.row:last-child > .cell {
+  border-bottom: 1px solid var( --grid-border-color);
+}
+.menu {
+  margin-bottom: 10px;
+}
+footer {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #504f4f;
+}
